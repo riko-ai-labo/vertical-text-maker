@@ -27,9 +27,17 @@ document.addEventListener('DOMContentLoaded', function() {
         const characters = Array.from(inputText);
         
         characters.forEach(char => {
+            // 伸ばし棒を縦棒に変換
+            let displayChar = char;
+            if (char === 'ー' || char === '－' || char === '―' || char === '—' || char === '-' || char === '–') {
+                displayChar = '｜';
+            } else if (char === '〜' || char === '～') {
+                displayChar = '｜';
+            }
+            
             const charElement = document.createElement('div');
             charElement.className = 'vertical-char';
-            charElement.textContent = char;
+            charElement.textContent = displayChar;
             outputArea.appendChild(charElement);
         });
         
