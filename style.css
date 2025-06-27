@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Yu Gothic', sans-serif;
+    background: linear-gradient(135deg, #ffeef8 0%, #ffe0f0 100%);
+    color: #5a4a5a;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(255, 192, 203, 0.3);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.riko-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid #ffb6c1;
+    box-shadow: 0 4px 10px rgba(255, 192, 203, 0.4);
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff69b4;
+    text-shadow: 2px 2px 4px rgba(255, 192, 203, 0.5);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
+}
+
+.input-section {
+    margin-bottom: 2rem;
+}
+
+#textInput {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #ffb6c1;
+    border-radius: 25px;
+    margin-bottom: 1rem;
+    transition: all 0.3s;
+    background: rgba(255, 255, 255, 0.8);
+    color: #5a4a5a;
+}
+
+#textInput::placeholder {
+    color: #d8a8b8;
+}
+
+#textInput:focus {
+    outline: none;
+    border-color: #ff69b4;
+    box-shadow: 0 0 10px rgba(255, 182, 193, 0.4);
+}
+
+#convertButton {
+    padding: 0.75rem 2.5rem;
+    font-size: 1rem;
+    background: linear-gradient(135deg, #ff69b4 0%, #ff86b7 100%);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+}
+
+#convertButton:hover {
+    background: linear-gradient(135deg, #ff86b7 0%, #ff69b4 100%);
+    box-shadow: 0 6px 20px rgba(255, 105, 180, 0.4);
+    transform: translateY(-2px);
+}
+
+#convertButton:active {
+    transform: translateY(0);
+}
+
+.output-area {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    border: 2px dashed #ffb6c1;
+    font-size: 1.8rem;
+    letter-spacing: 0.2em;
+    color: #5a4a5a;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
+}
+
+.vertical-char {
+    display: block;
+    margin-bottom: 0.3em;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.copy-button {
+    margin-top: 1.5rem;
+    padding: 0.6rem 2rem;
+    font-size: 0.9rem;
+    background: linear-gradient(135deg, #98fb98 0%, #90ee90 100%);
+    color: #2e7d2e;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(152, 251, 152, 0.3);
+}
+
+.copy-button:hover {
+    background: linear-gradient(135deg, #90ee90 0%, #98fb98 100%);
+    box-shadow: 0 6px 20px rgba(152, 251, 152, 0.4);
+    transform: translateY(-2px);
+}
+
+.copy-button:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem;
+    }
+    
+    .header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .riko-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    #textInput {
+        font-size: 0.9rem;
+    }
+    
+    #convertButton {
+        padding: 0.6rem 2rem;
+        font-size: 0.9rem;
+    }
+    
+    .output-area {
+        font-size: 1.4rem;
+        padding: 1.5rem;
+    }
+    
+    .copy-button {
+        padding: 0.5rem 1.5rem;
+        font-size: 0.85rem;
+    }
+}
